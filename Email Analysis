@@ -1,1 +1,29 @@
+TASK  –  EMAIL ANALYSIS 
+
+Target for analysing Duolingo <hello@duolingo.com>    
+
+ Red Flags- 
+
+DKIM(Domain Keys Identified Mail) Signature –Body hash did not verify.  
+
+DKIM Signature Alignment –Signature domain not aligned. 
+ 
+
+Issue – DKIM Signature  
+
+               Red Flag Message – Signature not verified 
+
+                Impact- Message may be altered  
+
+                 Remedy-Sync Public key with DNS, test with test messages 
+
+         B. Issue- DKIM Signature Alignment 
+
+                 Red Flag Message – Signature Domain not Aligned  
+
+                  Impact- Spoofing Risk, DMARC Fail  
+
+                   Remedy- Adjust ‘d= to’ match ‘From’; align selector domain; update DMARC  
+
+                                       adkim setting .  
 
